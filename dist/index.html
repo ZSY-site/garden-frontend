@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>珠峰课堂</title>
+</head>
+
+<body>
+    <script>
+        var docEl = document.documentElement;
+        // var dpr = window.devicePixelRatio || 1
+
+        /**
+         * 1. chrome 默认字体是16px。
+         * 2. 当我们设置了根元素的大小后，字体也会被影响到。
+         * 3. 所以我们可以重新设置字体大小。
+         */
+        // function setBodyFontSize() {
+        //     if (document.body) {
+        //         document.body.style.fontSize = (12 * dpr) + 'px'
+        //     } else {
+        //         document.addEventListener('DOMContentLoaded', setBodyFontSize)
+        //     }
+        // }
+        // setBodyFontSize()
+
+        // iphone6的根元素就是 37.5px, 即1rem = 37.5px
+        function setRemUnit() {
+            var rem = docEl.clientWidth / 10;
+            docEl.style.fontSize = rem + 'px';
+        }
+        setRemUnit();
+    </script>
+    <div id="root"></div>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>

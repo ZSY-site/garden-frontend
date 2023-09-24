@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist", // 指定输出目录，比如执行 tsc xx，会把代码输到指定目录
+    "sourceMap": true, // 把 ts 文件编译成 js 文件的时候，同时生成对应的 sourceMap 文件
+    "noImplicitAny": false, // 为true，那么就不允许出现any类型
+    "module": "commonjs", // 就是你的TypeScript文件中的module，采用何种方式实现
+    "target": "es5", // 就是TypeScript文件编译后生成的javascript文件里的语法应该遵循哪个JavaScript的版本。
+    "jsx": "react", //如何编译jsx语法
+    "esModuleInterop": true, // ​​esModuleInterop​​​ 选项的作用是支持使用 ​​import cjs from 'cjs'​​​ 的方式引入 ​​commonjs​​ 包。
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*" // 只是编译src目录下面的ts文件
+  ]
+}
